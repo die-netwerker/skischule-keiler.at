@@ -1,0 +1,3 @@
+shopware:
+    deployment:
+        runtime_extension_management: true
