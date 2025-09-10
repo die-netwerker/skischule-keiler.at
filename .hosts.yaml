@@ -2,8 +2,8 @@ config:
   repository: git@github.com:die-netwerker/skischule-keiler.at.git
 hosts:
   main:
-    hostname: 'info@netwerk.at@a-sbhfq5'
-    remote_user: 'schnoh'
+    hostname: 'ssh.isenstedt.project.host'
+    remote_user: 'info@netwerk.at@a-sbhfq5'
     port: 22
     deploy_path: '~/html/shopware-live-uc2dn'
     branch: main
