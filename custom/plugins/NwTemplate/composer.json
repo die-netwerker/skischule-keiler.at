@@ -1,0 +1,19 @@
+{
+  "name": "netwerk/nw-template",
+  "description": "Netwerk Template",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "version": "1.0.0",
+  "autoload": {
+    "psr-4": {
+      "NwTemplate\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "NwTemplate\\NwTemplate",
+    "label": {
+      "de-DE": "Netwerk Template",
+      "en-GB": "Netwerk Template"
+    }
+  }
+}

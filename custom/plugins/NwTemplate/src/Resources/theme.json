@@ -1,0 +1,22 @@
+{
+  "name": "NwTemplate",
+  "author": "netwerk Kreidl GmbH & CO Kg",
+  "views": [
+     "@Storefront",
+     "@Plugins",
+     "@NwTemplate"
+  ],
+  "style": [
+    "app/storefront/src/scss/overrides.scss",
+    "@Storefront",
+    "app/storefront/src/scss/base.scss"
+  ],
+  "script": [
+    "@Storefront",
+    "app/storefront/dist/storefront/js/nw-template/nw-template.js"
+  ],
+  "asset": [
+    "@Storefront",
+    "app/storefront/src/assets"
+  ]
+}
