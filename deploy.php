@@ -26,6 +26,7 @@ set('shared_files', [
     'public/.htaccess',
     'public/.user.ini',
     'auth.json',
+    'public/sw-domain-hash.html',
 ]);
 
 // Gemeinsame Verzeichnisse
