@@ -11,29 +11,33 @@
         "shopware/storefront": "*",
         "symfony/flex": "~2"
     },
-    "repositories": [
-        {
+    "repositories": {
+        "shopware-packages": {
+            "type": "composer",
+            "url": "https://packages.shopware.com"
+        },
+        "0": {
             "type": "path",
             "url": "custom/plugins/*",
             "options": {
                 "symlink": true
             }
         },
-        {
+        "1": {
             "type": "path",
             "url": "custom/plugins/*/packages/*",
             "options": {
                 "symlink": true
             }
         },
-        {
+        "2": {
             "type": "path",
             "url": "custom/static-plugins/*",
             "options": {
                 "symlink": true
             }
         }
-    ],
+    },
     "autoload": {
         "psr-4": {
             "App\\": "src/"

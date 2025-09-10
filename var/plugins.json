@@ -1,0 +1,200 @@
+{
+    "Framework": {
+        "basePath": "vendor\/shopware\/core\/Framework\/",
+        "views": [
+            "Resources\/views"
+        ],
+        "technicalName": "framework",
+        "isTheme": false,
+        "administration": {
+            "path": "Resources\/app\/administration\/src",
+            "entryFilePath": null,
+            "webpack": null
+        },
+        "storefront": {
+            "path": "Resources\/app\/storefront\/src",
+            "entryFilePath": null,
+            "webpack": null,
+            "styleFiles": []
+        }
+    },
+    "System": {
+        "basePath": "vendor\/shopware\/core\/System\/",
+        "views": [
+            "Resources\/views"
+        ],
+        "technicalName": "system",
+        "isTheme": false,
+        "administration": {
+            "path": "Resources\/app\/administration\/src",
+            "entryFilePath": null,
+            "webpack": null
+        },
+        "storefront": {
+            "path": "Resources\/app\/storefront\/src",
+            "entryFilePath": null,
+            "webpack": null,
+            "styleFiles": []
+        }
+    },
+    "Content": {
+        "basePath": "vendor\/shopware\/core\/Content\/",
+        "views": [
+            "Resources\/views"
+        ],
+        "technicalName": "content",
+        "isTheme": false,
+        "administration": {
+            "path": "Resources\/app\/administration\/src",
+            "entryFilePath": null,
+            "webpack": null
+        },
+        "storefront": {
+            "path": "Resources\/app\/storefront\/src",
+            "entryFilePath": null,
+            "webpack": null,
+            "styleFiles": []
+        }
+    },
+    "Checkout": {
+        "basePath": "vendor\/shopware\/core\/Checkout\/",
+        "views": [
+            "Resources\/views"
+        ],
+        "technicalName": "checkout",
+        "isTheme": false,
+        "administration": {
+            "path": "Resources\/app\/administration\/src",
+            "entryFilePath": null,
+            "webpack": null
+        },
+        "storefront": {
+            "path": "Resources\/app\/storefront\/src",
+            "entryFilePath": null,
+            "webpack": null,
+            "styleFiles": []
+        }
+    },
+    "Maintenance": {
+        "basePath": "vendor\/shopware\/core\/Maintenance\/",
+        "views": [
+            "Resources\/views"
+        ],
+        "technicalName": "maintenance",
+        "isTheme": false,
+        "administration": {
+            "path": "Resources\/app\/administration\/src",
+            "entryFilePath": null,
+            "webpack": null
+        },
+        "storefront": {
+            "path": "Resources\/app\/storefront\/src",
+            "entryFilePath": null,
+            "webpack": null,
+            "styleFiles": []
+        }
+    },
+    "Profiling": {
+        "basePath": "vendor\/shopware\/core\/Profiling\/",
+        "views": [
+            "Resources\/views"
+        ],
+        "technicalName": "profiling",
+        "isTheme": false,
+        "administration": {
+            "path": "Resources\/app\/administration\/src",
+            "entryFilePath": null,
+            "webpack": null
+        },
+        "storefront": {
+            "path": "Resources\/app\/storefront\/src",
+            "entryFilePath": null,
+            "webpack": null,
+            "styleFiles": []
+        }
+    },
+    "Service": {
+        "basePath": "vendor\/shopware\/core\/Service\/",
+        "views": [
+            "Resources\/views"
+        ],
+        "technicalName": "service",
+        "isTheme": false,
+        "administration": {
+            "path": "Resources\/app\/administration\/src",
+            "entryFilePath": null,
+            "webpack": null
+        },
+        "storefront": {
+            "path": "Resources\/app\/storefront\/src",
+            "entryFilePath": null,
+            "webpack": null,
+            "styleFiles": []
+        }
+    },
+    "Administration": {
+        "basePath": "vendor\/shopware\/administration\/",
+        "views": [
+            "Resources\/views"
+        ],
+        "technicalName": "administration",
+        "isTheme": false,
+        "administration": {
+            "path": "Resources\/app\/administration\/src",
+            "entryFilePath": null,
+            "webpack": null
+        },
+        "storefront": {
+            "path": "Resources\/app\/storefront\/src",
+            "entryFilePath": null,
+            "webpack": null,
+            "styleFiles": []
+        }
+    },
+    "Storefront": {
+        "basePath": "vendor\/shopware\/storefront\/",
+        "views": [
+            "Resources\/views"
+        ],
+        "technicalName": "storefront",
+        "isTheme": true,
+        "administration": {
+            "path": "Resources\/app\/administration\/src",
+            "entryFilePath": "Resources\/app\/administration\/src\/main.js",
+            "webpack": null
+        },
+        "storefront": {
+            "path": "Resources\/app\/storefront\/src",
+            "entryFilePath": "Resources\/app\/storefront\/src\/main.js",
+            "webpack": null,
+            "styleFiles": [
+                "vendor\/shopware\/storefront\/Resources\/app\/storefront\/src\/scss\/base.scss",
+                "vendor\/shopware\/storefront\/Resources\/app\/storefront\/src\/scss\/skin\/shopware\/_base.scss",
+                "vendor\/shopware\/storefront\/Resources\/@Plugins"
+            ]
+        }
+    },
+    "NwTemplate": {
+        "basePath": "custom\/plugins\/NwTemplate\/\/src\/",
+        "views": [
+            "Resources\/views"
+        ],
+        "technicalName": "nw-template",
+        "isTheme": true,
+        "administration": {
+            "path": "Resources\/app\/administration\/src",
+            "entryFilePath": null,
+            "webpack": null
+        },
+        "storefront": {
+            "path": "Resources\/app\/storefront\/src",
+            "entryFilePath": "Resources\/app\/storefront\/src\/main.js",
+            "webpack": null,
+            "styleFiles": [
+                "custom\/plugins\/NwTemplate\/src\/Resources\/app\/storefront\/src\/scss\/overrides.scss",
+                "custom\/plugins\/NwTemplate\/src\/Resources\/@Storefront",
+                "custom\/plugins\/NwTemplate\/src\/Resources\/app\/storefront\/src\/scss\/base.scss"
+            ]
+        }
+    }
+}
