@@ -1,0 +1,41 @@
+deployment:
+  hooks:
+    pre: |
+      echo "Before deployment general"
+    post: |
+      echo "After deployment general"
+    pre-install: |
+      echo "Before running system:install"
+    post-install: |
+      echo "After running system:install"
+    pre-update: |
+      echo "Before running system:update"
+    post-update: |
+      echo "After running system:update"
+
+  # Automatically installs and updates all extensions included in custom/plugins and custom/apps and composer
+  extension-management:
+    enabled: true
+#    # These extensions are not managed, you should use one-time-tasks to manage them
+#    exclude:
+#      - Name
+    # These extensions are always updated even if their version does not change
+    # This is useful for project-specific plugins that are not versioned
+#    force-update:
+#      - NetwerkCustomFields
+#    overrides:
+      # the key is the extension name (app or plugin)
+#      SwagPlatformDemoData:
+#        state: remove
+#        keepUserData: false
+#      AnotherPlugin:
+#        # This plugin can be installed, but should be inactive
+#        state: inactive
+#  one-time-tasks:
+#    - id: foo
+#      script: |
+#        # runs one time in deployment, then never again
+#        ./bin/console --version
+#
+#  store:
+#    license-domain: 'example.com'
