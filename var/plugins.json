@@ -196,5 +196,61 @@
                 "custom\/plugins\/NwTemplate\/src\/Resources\/app\/storefront\/src\/scss\/base.scss"
             ]
         }
+    },
+    "SwagAIImageEditor": {
+        "basePath": "https:\/\/swagaiimageeditor.apps.shopware.io\/",
+        "views": [
+            "Resources\/views"
+        ],
+        "technicalName": "swag-a-i-image-editor",
+        "isTheme": false,
+        "storefront": {
+            "path": "Resources\/app\/storefront\/src",
+            "entryFilePath": null,
+            "webpack": null,
+            "styleFiles": []
+        }
+    },
+    "SwagRecommendations": {
+        "basePath": "https:\/\/swagrecommendations.apps.shopware.io\/",
+        "views": [
+            "Resources\/views"
+        ],
+        "technicalName": "swag-recommendations",
+        "isTheme": false,
+        "storefront": {
+            "path": "Resources\/app\/storefront\/src",
+            "entryFilePath": null,
+            "webpack": null,
+            "styleFiles": []
+        }
+    },
+    "SwagCopilot": {
+        "basePath": "https:\/\/copilot.apps.shopware.io\/",
+        "views": [
+            "Resources\/views"
+        ],
+        "technicalName": "swag-copilot",
+        "isTheme": false,
+        "storefront": {
+            "path": "Resources\/app\/storefront\/src",
+            "entryFilePath": null,
+            "webpack": null,
+            "styleFiles": []
+        }
+    },
+    "SwagPreviewGenerator": {
+        "basePath": "https:\/\/preview-generator-swsvc.apps.shopware.io\/",
+        "views": [
+            "Resources\/views"
+        ],
+        "technicalName": "swag-preview-generator",
+        "isTheme": false,
+        "storefront": {
+            "path": "Resources\/app\/storefront\/src",
+            "entryFilePath": null,
+            "webpack": null,
+            "styleFiles": []
+        }
     }
 }

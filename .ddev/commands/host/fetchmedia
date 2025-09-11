@@ -1,0 +1,18 @@
+#!/bin/bash
+set -e
+
+# Remote-Infos aus .hosts.yaml
+REMOTE_PATH=$(yq '.hosts.main.deploy_path' .hosts.yaml)
+REMOTE_USER=$(yq '.hosts.main.remote_user' .hosts.yaml)
+REMOTE_HOSTNAME=$(yq '.hosts.main.hostname' .hosts.yaml)
+REMOTE_HOST="${REMOTE_USER}@${REMOTE_HOSTNAME}"
+
+echo "Synchronisiere Medien von $REMOTE_HOST..."
+
+rsync -avz --delete $REMOTE_HOST:$REMOTE_PATH/current/public/media/ ./public/media/
+rsync -avz --delete $REMOTE_HOST:$REMOTE_PATH/current/public/thumbnail/ ./public/thumbnail/
+
+echo "Generiere Thumbnails neu..."
+ddev exec bin/console media:generate-thumbnails
+
+echo "Medien-Sync abgeschlossen ✅"

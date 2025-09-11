@@ -1,0 +1,52 @@
+#!/bin/bash
+set -e
+
+# Prüfen, ob yq installiert ist
+if ! command -v yq &> /dev/null; then
+    echo "'yq' ist nicht installiert. Bitte mit 'brew install yq' oder von https://github.com/mikefarah/yq installieren."
+    exit 1
+fi
+
+# Remote-Infos aus .hosts.yaml
+REMOTE_PATH=$(yq '.hosts.main.deploy_path' .hosts.yaml)
+REMOTE_USER=$(yq '.hosts.main.remote_user' .hosts.yaml)
+REMOTE_HOSTNAME=$(yq '.hosts.main.hostname' .hosts.yaml)
+REMOTE_HOST="${REMOTE_USER}@${REMOTE_HOSTNAME}"
+
+echo "Hole DB-Verbindungsdaten von $REMOTE_HOST..."
+
+# Hole DATABASE_URL aus .env
+DB_URL=$(ssh "$REMOTE_HOST" "grep DATABASE_URL= $REMOTE_PATH/current/.env | cut -d '=' -f2")
+
+if [ -z "$DB_URL" ]; then
+  echo "Fehler: DATABASE_URL konnte nicht gelesen werden."
+  exit 1
+fi
+
+# Zerlegen in Host/User/Pass/DB
+proto="$(echo $DB_URL | cut -d: -f1)"
+userpass="$(echo $DB_URL | cut -d/ -f3 | cut -d@ -f1)"
+dbhost="$(echo $DB_URL | cut -d/ -f3 | cut -d@ -f2 | cut -d: -f1)"
+db="$(echo $DB_URL | cut -d/ -f4)"
+dbuser="$(echo $userpass | cut -d: -f1)"
+dbpass="$(echo $userpass | cut -d: -f2)"
+
+echo "Erstelle Datenbank-Dump..."
+ssh $REMOTE_HOST "mysqldump --opt --no-tablespaces -h $dbhost -u $dbuser -p$dbpass $db" > dump.sql
+
+echo "Importiere Dump in DDEV..."
+ddev import-db --file=dump.sql
+rm -f dump.sql
+
+# Domain anpassen
+LOCAL_URL=$(ddev describe -j | jq -r '.raw.primary_url')
+echo "Passe Verkaufskanal-Domains auf $LOCAL_URL an..."
+ddev exec mysql -uroot -proot db -e \
+"UPDATE sales_channel_domain SET url = REPLACE(url, 'https://p-xmlkj9.project.space', '$LOCAL_URL');"
+
+echo "DB-Sync abgeschlossen ✅"
+
+echo "Build Storefront ✅"
+ddev exec bin/build-storefront.sh
+
+echo "Theme komiliert und Cache geleert ✅"
