@@ -1,5 +1,6 @@
 @import 'fonts.scss';
-
+@import 'typo.scss';
+@import 'layout.scss';
 /* base */
 body {
     font-size: clamp(16px, calc(14.8px + 0.2vw), 18px);;

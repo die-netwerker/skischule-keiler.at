@@ -1,0 +1,51 @@
+{% sw_extends '@Storefront/storefront/layout/header/header.html.twig' %}
+{% block layout_header_navigation %}
+    <div class="row align-items-center justify-content-between header-row">
+        {% block layout_header_logo %}
+            <div class="col-auto header-logo-col pb-sm-2 my-3 m-lg-0">
+                {% sw_include '@Storefront/storefront/layout/header/logo.html.twig' %}
+            </div>
+        {% endblock %}
+
+        {% block layout_header_search %}
+        {% endblock %}
+        {% block base_navigation %}
+            <div class="navigation col-auto d-none d-lg-block">
+                {% sw_include '@Storefront/storefront/layout/navbar/navbar.html.twig' with { header: header } %}
+            </div>
+        {% endblock %}
+
+        {% block layout_header_actions %}
+            <div class="col-auto order-1 order-sm-2 header-actions-col">
+                <div class="row g-0">
+                    
+                    {% endblock %}
+
+                    {% if config('core.cart.wishlistEnabled') %}
+                        {% block layout_header_actions_wishlist %}
+                            {{ parent() }}
+                        {% endblock %}
+                    {% endif %}
+
+                    {% block layout_header_actions_account %}
+                        {{ parent() }}
+                    {% endblock %}
+
+                    {% block layout_header_actions_cart %}
+                        {{ parent() }}
+                    {% endblock %}
+                    {% block layout_header_navigation_toggle %}
+                        <div class="col d-m-block d-lg-none">
+                            <div class="menu-button">
+                                {% block layout_header_navigation_toggle_button %}
+                                    {{ parent() }}
+                                {% endblock %}
+                            </div>
+                        </div>
+                    {% endblock %}
+                    {% block layout_header_search_toggle %}
+                </div>
+            </div>
+        {% endblock %}
+    </div>
+{% endblock %}

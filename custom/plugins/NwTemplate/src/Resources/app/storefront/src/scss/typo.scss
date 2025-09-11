@@ -1,0 +1,12 @@
+h1, .h1 {
+    font-size: clamp(36px, calc(26.4px + 1.6vw), 52px);
+}
+h2, .h2 {
+    font-size: clamp(28px, calc(17.2px + 1.8vw), 46px);
+    &.checkout-aside-summary-header {
+        font-size: inherit;
+    }
+}
+h3, .h3 {
+    font-size: clamp(24px, calc(15.6px + 1.4vw), 38px);
+}
