@@ -1,3 +1,18 @@
 {% sw_extends '@Storefront/storefront/layout/footer/footer.html.twig' %}
+{% block layout_footer_navigation_hotline_content %}
+    {% set cmsPath = 'frontend.cms.page.full' %}
+
+    <div id="collapseFooterHotline"
+            class="footer-column-content collapse js-footer-column-content footer-contact mb-4 mb-md-0"
+            aria-labelledby="collapseFooterHotlineTitle"
+            role="listitem">
+
+        <div class="footer-column-content-inner">
+            <p class="footer-contact-hotline">
+                {{ 'footer.serviceHotline'|trans|sw_sanitize }}
+            </p>
+        </div>
+    </div>
+{% endblock %}
 {% block layout_footer_copyright %}
 {% endblock %}

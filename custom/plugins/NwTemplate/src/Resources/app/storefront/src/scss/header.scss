@@ -1,0 +1,22 @@
+header.header-main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    background: #fff;
+    &.scroll {
+        box-shadow: 0px 0px 7px 0px #42728f;
+        .top-bar {
+            display: none;
+        }
+    }
+}
+.header-logo-picture {
+    width: 143px;
+    min-width: unset;
+    max-height: 60px;
+    @media (max-width:991px) {
+        width: 120px;
+    }
+}

@@ -1,13 +1,9 @@
-header.header-main {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 20;
-    background: #fff;
-}
+
 #content-main {
     margin-top: 120px;
+    @media (max-width:991px) {
+        margin-top: 75px;
+    }
 }
 .bg-blue {
     background: url('#{$app-css-relative-asset-path}/images/bg.webp') no-repeat left center;
@@ -26,4 +22,9 @@ header.header-main {
         font-size: clamp(20px, calc(16.4px + 0.6vw), 26px);
         margin-bottom: unset;
     }
+}
+
+.cms-section-default.full-width {
+    padding-left: unset;
+    padding-right: unset;
 }

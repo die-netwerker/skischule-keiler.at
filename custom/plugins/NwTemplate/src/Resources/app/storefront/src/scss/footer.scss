@@ -1,0 +1,6 @@
+.footer-contact-hotline a {
+    margin-bottom: unset;
+    & + a {
+        margin-top: unset;
+    }
+}

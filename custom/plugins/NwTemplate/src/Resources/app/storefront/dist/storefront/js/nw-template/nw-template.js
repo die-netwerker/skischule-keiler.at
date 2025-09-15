@@ -1,0 +1,1 @@
+(()=>{function e(){window.scrollY>=50?document.querySelector("header.header-main").classList.add("scroll"):document.querySelector("header.header-main").classList.remove("scroll")}e(),window.addEventListener("scroll",function(){e()})})();
