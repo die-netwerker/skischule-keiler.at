@@ -1,0 +1,37 @@
+.teaser {
+    .image-text-gallery-card {
+        height: 100%;
+        background-color: #437290;
+        background: linear-gradient(115deg,#2e5268 0%,#2e5268 45%,#437290 45.1%,#437290 100%);
+        h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, ul, ol {
+            color: #fff;
+            a {
+                color: #fff;
+            }
+        }
+        p:last-of-type {
+            margin-bottom: unset;
+        }
+        .cms-element-image {
+            padding: 1rem;
+        }
+    }
+    .btn {
+        display: block;
+        --bs-btn-color: #fff;
+        --bs-btn-bg: #63a07c;
+        --bs-btn-border-color: #63a07c;
+        --bs-btn-hover-color: #000;
+        --bs-btn-hover-bg: #548869;
+        --bs-btn-hover-border-color: #4f8063;
+        --bs-btn-focus-shadow-rgb: 122, 174, 144;
+        --bs-btn-active-color: #fff;
+        --bs-btn-active-bg: #4f8063;
+        --bs-btn-active-border-color: #4a785d;
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        --bs-btn-disabled-color: #000;
+        --bs-btn-disabled-bg: #63a07c;
+        --bs-btn-disabled-border-color: #63a07c;
+        --bs-btn-focus-box-shadow: 0 0 0 0.125rem #fff, 0 0 0 0.25rem #2d5368;
+    }
+}
