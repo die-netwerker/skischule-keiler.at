@@ -197,6 +197,25 @@
             ]
         }
     },
+    "NetwerkCustomFields": {
+        "basePath": "custom\/plugins\/NetwerkCustomFields\/\/src\/",
+        "views": [
+            "Resources\/views"
+        ],
+        "technicalName": "netwerk-custom-fields",
+        "isTheme": false,
+        "administration": {
+            "path": "Resources\/app\/administration\/src",
+            "entryFilePath": null,
+            "webpack": null
+        },
+        "storefront": {
+            "path": "Resources\/app\/storefront\/src",
+            "entryFilePath": null,
+            "webpack": null,
+            "styleFiles": []
+        }
+    },
     "SwagAIImageEditor": {
         "basePath": "https:\/\/swagaiimageeditor.apps.shopware.io\/",
         "views": [
