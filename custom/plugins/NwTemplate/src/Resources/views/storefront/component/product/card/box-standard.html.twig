@@ -1,0 +1,18 @@
+{% sw_extends '@Storefront/storefront/component/product/card/box-standard.html.twig' %}
+{% block component_product_box_variant_characteristics %}
+{% endblock %}
+{% block component_product_box_description %}
+    {% set short_description = product.translated.customFields.nw_product_short_description %}
+    {% set short_description_list = short_description|split(';') %}
+        {% if short_description %}
+            <ul class="product-description list-unstyled">
+                {% for item in short_description_list %}
+                    <li>{% sw_icon 'checkmark-circle' %} <span>{{ item }}<span></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="product-description">
+                {{ product.translated.description|striptags|raw }}
+            </p>
+        {% endif %}
+{% endblock %}

@@ -1,0 +1,27 @@
+{
+    "name": "netwerk/netwerk-custom-fields",
+    "description": "netwerk/netwerk-custom-fields",
+    "type": "shopware-platform-plugin",
+    "version": "1.0.0",
+    "license": "MIT",
+    "require": {
+        "shopware/core": "~6.7.0"
+    },
+    "extra": {
+        "shopware-plugin-class": "NetwerkCustomFields\\NetwerkCustomFields",
+        "label": {
+            "de-DE": "Netwerk Zusatzfelder",
+            "en-GB": "Netwerk Zusatzfelder"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "NetwerkCustomFields\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NetwerkCustomFields\\Tests\\": "tests/"
+        }
+    }
+}

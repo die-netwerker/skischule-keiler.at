@@ -1,0 +1,98 @@
+.product-box {
+    background-color: #437290;
+    background: linear-gradient(115deg,#2e5268 0%,#2e5268 45%,#437290 45.1%,#437290 100%);
+    .product-name {
+        color: #fff;
+        font-size: 1.5rem;
+    }
+    p, .product-price {
+        color: #fff;
+    }
+    .product-description {
+        color: #fff;
+        li {
+            display: flex;
+            column-gap: 5px;
+            .icon {
+                color: #63a07c;
+                flex-shrink: 0;
+                svg {
+                    top: unset;
+                }
+            }
+            & + li {
+                margin-top: 1rem;
+            }
+        }
+    }
+    .product-image-wrapper {
+        height: auto;
+        aspect-ratio: 3 / 2;
+    }
+    .product-image {
+        max-height: unset;
+        object-fit: cover;
+    }
+    .stretched-link::after {
+        height: calc((100% - 80px) + var(--bs-card-spacer-y))!important;
+    }
+    .btn {
+        --bs-btn-color: #fff;
+        --bs-btn-bg: #63a07c;
+        --bs-btn-border-color: #63a07c;
+        --bs-btn-hover-color: #000;
+        --bs-btn-hover-bg: #548869;
+        --bs-btn-hover-border-color: #4f8063;
+        --bs-btn-focus-shadow-rgb: 122, 174, 144;
+        --bs-btn-active-color: #fff;
+        --bs-btn-active-bg: #4f8063;
+        --bs-btn-active-border-color: #4a785d;
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        --bs-btn-disabled-color: #000;
+        --bs-btn-disabled-bg: #63a07c;
+        --bs-btn-disabled-border-color: #63a07c;
+        --bs-btn-focus-box-shadow: 0 0 0 0.125rem #fff, 0 0 0 0.25rem #2d5368;
+    }
+}
+
+.is-ctl-product {
+    .sw-text-editor-table {
+        width: 100%;
+    }
+    .sw-text-editor-table__row {
+        border-bottom: 1px dashed #c7c7c7;
+        padding-bottom: 1rem;
+        display: flex;
+        column-gap: 20px;
+        & + .sw-text-editor-table__row {
+            margin-top: 1rem;
+        }
+    }
+    .sw-text-editor-table .sw-text-editor-table__col {
+        border: unset;
+        padding: unset;
+        &:nth-child(1) {
+            text-transform: uppercase;
+            font-weight: 900;
+            width: calc(33% - 20px);
+            flex-shrink: 0;
+        }
+        &:nth-child(2) {
+            width: calc(67% - 20px);
+        }
+    }
+    @media (max-width:800px) {
+        .sw-text-editor-table__row {
+            flex-direction: column;
+            row-gap: 0.5rem;
+        }
+        .sw-text-editor-table .sw-text-editor-table__col {
+            &:nth-child(1) {
+                width: 100%;
+            }
+            &:nth-child(2) {
+                width: 100%;
+            }
+        }
+    }
+}
