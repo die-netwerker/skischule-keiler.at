@@ -1,0 +1,13 @@
+.faq {
+    border-bottom: 1px dashed #c7c7c7;
+    padding-bottom: 20px!important;
+    p {
+        margin-bottom: unset;
+        & + p {
+            margin-top: 1rem;
+        }
+    }
+    & + .faq {
+        margin-top: 20px;
+    }
+}

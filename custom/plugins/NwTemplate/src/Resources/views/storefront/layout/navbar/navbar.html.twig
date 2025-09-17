@@ -1,0 +1,21 @@
+{% sw_extends '@Storefront/storefront/layout/navbar/navbar.html.twig' %}
+{% block layout_navbar_menu_item %}
+    <li class="nav-item nav-item-{{ id }} {% if hasChildren %}dropdown{% endif %}">
+        {% block layout_navbar_menu_item_link %}
+           {{ parent() }}
+        {% endblock %}
+
+        {% if hasChildren %}
+            {% block layout_navbar_menu_item_children %}
+                <ul class="dropdown-menu p-4">
+                    {% sw_include '@Storefront/storefront/layout/navbar/content.html.twig' with {
+                        themeIconConfig: themeIconConfig,
+                        navigationTree: treeItem,
+                        level: level+1,
+                        page: page
+                    } only %}
+                </ul>
+            {% endblock %}
+        {% endif %}
+    </li>
+{% endblock %}

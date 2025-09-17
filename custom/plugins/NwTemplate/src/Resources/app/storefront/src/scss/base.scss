@@ -2,11 +2,13 @@
 @import 'typo.scss';
 @import 'layout.scss';
 @import 'header.scss';
+@import 'navigation.scss';
 @import 'footer.scss';
 @import 'hero.scss';
 @import 'teaser.scss';
 @import 'product.scss';
+@import 'faqs.scss';
 /* base */
 body {
-    font-size: clamp(16px, calc(14.8px + 0.2vw), 18px);;
+    font-size: clamp(16px, calc(14.8px + 0.2vw), 18px);
 }

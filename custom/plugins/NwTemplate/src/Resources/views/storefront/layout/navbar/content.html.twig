@@ -1,0 +1,26 @@
+{% block layout_navbar_content %}
+    {% set category = navigationTree.category %}
+    {% set name = category.translated.name %}
+
+    {% if navigationTree.children|length > 0 %}
+        {% for child in navigationTree.children %}
+                {% set hasChildren = child.children|length > 0 %}
+                <li class="{% if hasChildren %}dropdown-submenu{% endif %}">
+                    <a class="dropdown-item {% if hasChildren %}dropdown-toggle{% endif %}"
+                       href="{{ child.category.seoUrl ?: '#' }}"
+                       title="{{ child.category.translated.name }}"
+                       {% if hasChildren %}data-bs-toggle="dropdown"{% endif %}
+                    >
+                        {{ child.category.translated.name }}
+                    </a>
+
+                    {% if hasChildren %}
+                        {% sw_include '@Storefront/storefront/layout/navbar/content.html.twig' with {
+                            navigationTree: child,
+                            page: page
+                        } only %}
+                    {% endif %}
+                </li>
+            {% endfor %}
+    {% endif %}
+{% endblock %}

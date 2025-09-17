@@ -1,0 +1,13 @@
+.nav-item .dropdown-menu {
+    min-width: 200px;
+}
+.nav-item .dropdown-submenu {
+    position: relative;
+  
+    .dropdown-menu {
+      top: 0;
+      left: 100%;
+      margin-left: 0.1rem;
+      margin-right: 0.1rem;
+    }
+  }
