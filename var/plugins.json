@@ -206,14 +206,16 @@
         "isTheme": false,
         "administration": {
             "path": "Resources\/app\/administration\/src",
-            "entryFilePath": null,
+            "entryFilePath": "Resources\/app\/administration\/src\/main.js",
             "webpack": null
         },
         "storefront": {
             "path": "Resources\/app\/storefront\/src",
             "entryFilePath": null,
             "webpack": null,
-            "styleFiles": []
+            "styleFiles": [
+                "custom\/plugins\/NetwerkCustomFields\/src\/Resources\/app\/storefront\/src\/scss\/base.scss"
+            ]
         }
     },
     "SwagAIImageEditor": {

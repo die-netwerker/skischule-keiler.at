@@ -1,0 +1,25 @@
+{
+  "base": "/bundles/netwerkcustomfields/administration/",
+  "entryPoints": {
+    "netwerk-custom-fields": {
+      "css": [
+        "/bundles/netwerkcustomfields/administration/assets/netwerk-custom-fields-DpnVwx_X.css"
+      ],
+      "dynamic": [],
+      "js": [
+        "/bundles/netwerkcustomfields/administration/assets/netwerk-custom-fields-BdKB4E-o.js"
+      ],
+      "legacy": false,
+      "preload": []
+    }
+  },
+  "legacy": false,
+  "metadatas": {},
+  "version": [
+    "7.1.0",
+    7,
+    1,
+    0
+  ],
+  "viteServer": null
+}

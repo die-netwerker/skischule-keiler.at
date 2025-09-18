@@ -1,0 +1,11 @@
+{
+  "main.js": {
+    "file": "assets/netwerk-custom-fields-BdKB4E-o.js",
+    "name": "netwerk-custom-fields",
+    "src": "main.js",
+    "isEntry": true,
+    "css": [
+      "assets/netwerk-custom-fields-DpnVwx_X.css"
+    ]
+  }
+}

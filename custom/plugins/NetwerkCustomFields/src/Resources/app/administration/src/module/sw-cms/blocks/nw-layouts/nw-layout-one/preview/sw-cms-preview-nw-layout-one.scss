@@ -1,0 +1,35 @@
+.sw-cms-preview-nw-layout-one {
+    padding: 10px;
+    width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    height: 120px;
+    grid-template:
+        'l ct rt' auto
+        'l cb rb' auto / 1fr 1fr 1fr;
+    > div {
+        box-sizing: border-box;
+        background-color: rgba(78, 133, 222, 0.05);
+        color: rgba(78, 133, 222, 0.4);
+        border: 2px dashed rgba(78, 133, 222, 0.4);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:nth-child(1) {
+            grid-area: l;
+        }
+        &:nth-child(2) {
+            grid-area: ct;
+        }
+        &:nth-child(3) {
+            grid-area: cb;
+        }
+        &:nth-child(4) {
+            grid-area: rt;
+        }
+        &:nth-child(5) {
+            grid-area: rb;
+        }
+    }
+}

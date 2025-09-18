@@ -1,0 +1,23 @@
+<div class="nw-layout-one">
+    {% set id = element.id %}
+    <div class="left" data-cms-element-id="{{ id }}" >
+        {% set element = block.slots.getSlot('left') %}
+        {% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+    </div>
+    <div class="center-top" data-cms-element-id="{{ id }}" >
+        {% set element = block.slots.getSlot('center-top') %}
+        {% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+    </div>
+    <div class="center-bottom" data-cms-element-id="{{ id }}" >
+        {% set element = block.slots.getSlot('center-bottom') %}
+        {% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+    </div>
+    <div class="right-top" data-cms-element-id="{{ id }}" >
+        {% set element = block.slots.getSlot('right-top') %}
+        {% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+    </div>
+    <div class="right-bottom" data-cms-element-id="{{ id }}" >
+        {% set element = block.slots.getSlot('right-bottom') %}
+        {% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+    </div>
+</div>

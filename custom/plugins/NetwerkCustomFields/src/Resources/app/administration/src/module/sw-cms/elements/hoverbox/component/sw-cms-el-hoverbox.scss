@@ -1,0 +1,17 @@
+.sw-cms-el-hoverbox {
+    height: 100%;
+    position: relative;
+    width: 100%;
+    word-break: break-word;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+        text-align: center;
+        &.header {
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+    }
+}

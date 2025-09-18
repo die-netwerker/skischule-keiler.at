@@ -1,0 +1,28 @@
+.sw-cms-block-nw-layout-one {
+    width: 100%;
+    grid-gap: 20px;
+    display: grid;
+    grid-template:
+        'l ct rt' auto
+        'l cb rb' auto / 1fr 1fr 1fr;
+    > div {
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        &:nth-child(1) {
+            grid-area: l;
+        }
+        &:nth-child(2) {
+            grid-area: ct;
+        }
+        &:nth-child(3) {
+            grid-area: cb;
+        }
+        &:nth-child(4) {
+            grid-area: rt;
+        }
+        &:nth-child(5) {
+            grid-area: rb;
+        }
+    }
+}

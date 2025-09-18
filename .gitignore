@@ -19,3 +19,4 @@
 /install.lock
 public/asset-manifest.json
 ###< shopware/core ###
+.vscode
